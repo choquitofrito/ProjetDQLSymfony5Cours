@@ -13,8 +13,13 @@ class ExemplesDqlController extends AbstractController
     public function exempleSelectArrayArrays()
     {
         $em = $this->getDoctrine()->getManager();
-        $query = $em->createQuery ("SELECT livre.titre,livre.prix FROM App\Entity\Livre livre");
-        
+        $query = $em->createQuery ("SELECT livre.titre, livre.prix FROM App\Entity\Livre livre");
+        dd ($query->getResult());
         return $this->render('exemples_dql/exemple_select_array_arrays.html.twig');
     }
+
+    
+
+
+
 }
