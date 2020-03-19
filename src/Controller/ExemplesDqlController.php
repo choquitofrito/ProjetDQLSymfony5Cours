@@ -36,11 +36,8 @@ class ExemplesDqlController extends AbstractController
      */
     public function exempleObtenirLivreAvecExemplaires (){
         $em = $this->getDoctrine()->getManager();
-        $query = $em->createQuery ("SELECT livre FROM App\Entity\Livre livre JOIN livre.exemplaires");
+        $query = $em->createQuery ("SELECT livre FROM App\Entity\Livre livre JOIN livre.exemplaires exemplaires");
         dd ($query->getResult());
-        
-        
-
     }
 
 
